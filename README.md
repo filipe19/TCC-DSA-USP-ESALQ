@@ -10,3 +10,10 @@
 ### Foram analisados dados registrados de acidentes de trânsito na rodovia BR-101. Os trechos da rodovia com maior índice de acidentes foram identificados e foi implementado um modelo para prever acidentes. 
 
 ### E foram utilizados dados abertos da Polícia Rodoviária Federal (PRF) e ferramentas como Jupyter Notebook e Python para visualizar os resultados.
+
+# Requirements
+
+-
+-
+-
+-
