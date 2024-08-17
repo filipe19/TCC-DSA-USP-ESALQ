@@ -18,9 +18,9 @@
 
 Bibliotecas e ferramentas necessárias para executar o projeto:
 * **name: environment.yml**
-channels:
+- channels:
   - defaults
-dependencies:
+- dependencies:
   - python=3.9
   - pandas==2.0.3
   - plotly==5.17.0
@@ -34,47 +34,47 @@ dependencies:
   - pip:
       - some_pip_package
 
-## Instruções passo a passo sobre como instalar as dependências:
+# Instruções passo a passo sobre como instalar as dependências:
 
-# Usando a imagem base do Ubuntu:
-FROM ubuntu:20.04
+## Usando a imagem base do Ubuntu:
+- FROM ubuntu:20.04
 
-# Instala dependências de sistema:
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    wget \
-    git \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+## Instala dependências de sistema:
+- RUN apt-get update && apt-get install -y \
+    - build-essential \
+    - wget \
+    - git \
+    - curl \
+    - && rm -rf /var/lib/apt/lists/*
 
-# Baixa e instala o Anaconda:
-RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh -O /tmp/anaconda.sh \
-    && bash /tmp/anaconda.sh -b -p /opt/conda \
-    && rm /tmp/anaconda.sh \
-    && /opt/conda/bin/conda init \
-    && /opt/conda/bin/conda clean -ya
+## Baixa e instala o Anaconda:
+- RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh -O /tmp/anaconda.sh \
+    - && bash /tmp/anaconda.sh -b -p /opt/conda \
+    - && rm /tmp/anaconda.sh \
+    - && /opt/conda/bin/conda init \
+    - && /opt/conda/bin/conda clean -ya
 
-# Adiciona o Anaconda ao PATH:
-ENV PATH /opt/conda/bin:$PATH
+## Adiciona o Anaconda ao PATH:
+- ENV PATH /opt/conda/bin:$PATH
 
-# Configura o diretório de trabalho:
-WORKDIR /app
+## Configura o diretório de trabalho:
+- WORKDIR /app
 
-# Copia o environment.yml para o container:
-COPY environment.yml .
+## Copia o environment.yml para o container:
+- COPY environment.yml .
 
-# Instala as dependências listadas no environment.yml:
-RUN conda env create -f environment.yml
+## Instala as dependências listadas no environment.yml:
+- RUN conda env create -f environment.yml
 
-# Ativa o ambiente ao iniciar o container:
-SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
+## Ativa o ambiente ao iniciar o container:
+- SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
 
-# Copia o conteúdo do diretório atual para o container:
-COPY . .
+## Copia o conteúdo do diretório atual para o container:
+- COPY . .
 
-# A porta que o Jupyter Notebook usa:
-EXPOSE 8888
+## A porta que o Jupyter Notebook usa:
+- EXPOSE 8888
 
-# Iniciar o Jupyter Notebook:
-CMD ["conda", "run", "-n", "myenv", "jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
+## Iniciar o Jupyter Notebook:
+- CMD ["conda", "run", "-n", "myenv", "jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
 
