@@ -24,10 +24,11 @@ Bibliotecas e ferramentas necessárias para executar o projeto:
   - python=3.9
   - pandas==2.0.3
   - plotly==5.17.0
-  - numpy
+  - numpy==1.25.2
   - matplotlib
   - seaborn==0.13.1
-  - scikit-learn
+  - scikit-learn==1.2.2
+  - Imbalanced-learn==0.12.3
   - jupyter
   - folium==0.14.0
   - pip
