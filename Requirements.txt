@@ -1,5 +1,12 @@
 # **Requisitos**
 
+### Requisitos de Hardware
+- **CPU**: Intel Core i3; i5; i7-9700K @ 2.40; 3.60GHz
+- **Memória RAM**: 4; 8; 16 GB
+- **Espaço em Disco**: 250; 500 GB SSD
+- **GPU**: NVIDIA GeForce GTX 1660 (opcional)
+
+
 ### Requisitos de Software
 - **Sistema Operacional**: Windows 10
 
@@ -21,13 +28,6 @@ Bibliotecas e ferramentas necessárias para executar o projeto:
   - pip==23.0.1
   - pip:
       - some_pip_package
-
-
-### Requisitos de Hardware
-- **CPU**: Intel Core i3; i5; i7-9700K @ 2.40; 3.60GHz
-- **Memória RAM**: 4; 8; 16 GB
-- **Espaço em Disco**: 250; 500 GB SSD
-- **GPU**: NVIDIA GeForce GTX 1660 (opcional)
 
 
 # Instruções passo a passo sobre como instalar as dependências:

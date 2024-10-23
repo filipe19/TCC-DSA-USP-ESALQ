@@ -3,7 +3,9 @@
 
 # Inteligência Artificial para Predição de Acidentes de Trânsito na Rodovia BR-101
 
-### Neste trabalho utilizou-se Inteligência Artificial [IA] e Aprendizado de Máquina, com o uso dos 
+### Resumo:
+
+Neste trabalho utilizou-se Inteligência Artificial [IA] e Aprendizado de Máquina, com o uso dos 
 modelos de Regressão Logística e “Random Forest”, visando melhorar a segurança viária. 
 Foram analisados dados de acidentes de trânsito na BR-101, uma rodovia que enfrenta 
 desafios devido à sua extensão e às variadas condições geográficas e climáticas. O projeto 
@@ -84,7 +86,7 @@ World Health Organization [WHO]. 2023. Road traffic injuries. Disponível em:
 
 ### Arquivos:
 
-**_DATASET-ACIDENTES_RODOVIAS_FED-2018-2023-PRF** == contém o dataset coletado coletado na base de dados da PRF [salvos em .CSV].
+**_DATASET-ACIDENTES_RODOVIAS_FED-2018-2023-PRF** == contém o dataset coletado na base de dados da PRF [salvo em .CSV].
 
 **Dataframe-dados-processados-tratados** == contém planilhas com os dados [em .CSV].
 
